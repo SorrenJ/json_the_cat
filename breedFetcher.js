@@ -1,4 +1,4 @@
-let args = process.argv.slice(2);
+
 const request = require('request');
 
 const fetchBreedDescription = function(breedName, callback) {
@@ -6,8 +6,8 @@ const fetchBreedDescription = function(breedName, callback) {
 
     // converts the JSON string into an actual object
     const data = JSON.parse(body);
-    console.log(data);
-    console.log(typeof data);
+    // console.log(data);
+    // console.log(typeof data);
 
     // Edge case: Handle request errors and print the error details to the screen.
     if (error) {
@@ -27,14 +27,6 @@ const fetchBreedDescription = function(breedName, callback) {
   });
 };
 
-// Edge case: Handle request errors and print the error details to the screen.
-fetchBreedDescription(args[0], (error, desc) => {
-  if (error) {
-    console.log("Error fetch details: ", error);
-  } else {
-    console.log(desc);
-  }
-});
 
-console.log(typeof body);
 
+module.exports = { fetchBreedDescription };
