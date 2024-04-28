@@ -6,8 +6,7 @@ const fetchBreedDescription = function(breedName, callback) {
 
     // converts the JSON string into an actual object
     const data = JSON.parse(body);
-    // console.log(data);
-    // console.log(typeof data);
+
 
     // Edge case: Handle request errors and print the error details to the screen.
     if (error) {
@@ -26,7 +25,5 @@ const fetchBreedDescription = function(breedName, callback) {
 
   });
 };
-
-
 
 module.exports = { fetchBreedDescription };

@@ -15,4 +15,3 @@ fetchBreedDescription(args[0], (error, desc) => {
     }
   });
   
-  //console.log(typeof body);
